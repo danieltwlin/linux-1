@@ -16,7 +16,7 @@ os.chdir('/opt/py')
 # Dump DB
 if(1):
         # DB host
-        host ='172.16.2.139'
+        host ='xx.xx.xx.xx'
         if(0):
                 os.system('sudo rm publicitem.sql')
                 os.system('sudo rm answerinfo.sql')
