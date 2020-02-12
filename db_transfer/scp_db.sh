@@ -7,6 +7,9 @@ sshpass -p'pwd' scp rd@host:/opt/py/ies_middle.sql  .
 sshpass -p'pwd' scp rd@host:/opt/py/api_a1_log.sql  .
 sshpass -p'pwd' scp rd@host:/opt/py/api_log.sql  .
 
+hot=192.168.1.2
+echo $host
+
 # copy to container
 #docker cp publicitem.sql container_id:/opt
 #docker cp learncenter.sql container_id:/opt
