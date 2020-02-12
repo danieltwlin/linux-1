@@ -7,8 +7,11 @@ sshpass -p'pwd' scp rd@host:/opt/py/ies_middle.sql  .
 sshpass -p'pwd' scp rd@host:/opt/py/api_a1_log.sql  .
 sshpass -p'pwd' scp rd@host:/opt/py/api_log.sql  .
 
-hot=192.168.1.2
-echo $host
+# sample 
+host=192.168.xx.xx
+pwd=123
+/usr/bin/sshpass -p$pwd /opt/lampp/bin/mysqldump -uroot -p --opt -a --host=$host publicitem > publicitem.sql
+
 
 # copy to container
 #docker cp publicitem.sql container_id:/opt
