@@ -1,5 +1,5 @@
 #=== DB Tool ============
-# Date   : 2020.2.11
+# Date   : 2020.03.06
 # Author : daniel
 # Caption: Get new cn db to Alibaba VM
 #========================
@@ -9,9 +9,10 @@ from time import time
 start = time()
 print("Start : %s" % start)
 
-
-# Chdir
-os.chdir('/opt/py')
+# Set Work DIR
+if(1):
+        workpath = '/opt'
+        os.chdir(workpath)
 
 # Dump DB
 if(1):
