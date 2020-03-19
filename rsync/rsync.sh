@@ -16,4 +16,5 @@ rsync -avzh --progress pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 rsync -avP --progress pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 
 
-#-C, --cvs-exclude 排除那些通常不希望傳送的檔案.定義的方式與CVS傳送相同:
+#-C, --cvs-exclude 排除那些通常不希望傳送的檔案.定義的方式與CVS傳送相同
+#--size-only 只比對檔案大小，適用在時間不同步時
