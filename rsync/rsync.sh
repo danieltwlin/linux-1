@@ -15,8 +15,16 @@ rsync -avzh --progress pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 
 rsync -avP --progress pi@192.168.1.12:/mypath/myfile.gz /mybackup/
 
-#-C, --cvs-exclude 排除那些通常不希望傳送的檔案.定義的方式與CVS傳送相同
-rsync -av --exclude downloader --exclude media --exclude var     /var/www/project/ user@production.com:/var/www/project/httpdocs/ 
+# 排除特定資料夾
+rsync -av --exclude 'dir' source destination
+
+# 排除多個資料夾
+rsync -av --exclude 'dir1' --exclude 'dir2' source destination
+
+# 如果想要避掉 某幾個目錄下的子目錄 像是每個目錄下的.svn資料夾，
+# 可以直接用 --exclude '.svn/'， 他會自動避掉所有符合名稱的子目錄
+# 而如果是每個子目錄底下的檔案的話，
+# 如templates_c/底下的檔案，可以用 --exclude 'templates_c/*'
 
 #--size-only 只比對檔案大小，適用在時間不同步時
 
