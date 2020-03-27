@@ -5,3 +5,10 @@
 
  fuser -m -v /media/USB/
 
+#有时，导致设备忙的原因并不好找。碰到这种情况时，可以用lsof列出已打开文件，然后搜索列表查找待卸载的挂载点：
+
+lsof | grep mymount         查找mymount分区里打开的文件
+bash   9341  francois  cwd   DIR   8,1   1024    2 /mnt/mymount
+
+# 从上面的输出可知，mymount分区无法卸载的原因在于，francois运行的PID为 9341 的bash进程。
+
