@@ -1,0 +1,7 @@
+
+
+# 如果無法 umount 
+# 可以檢查一下是什麼程式在佔用
+
+ fuser -m -v /media/USB/
+
