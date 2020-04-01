@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# 注意當前目錄 ./* 的用法
+ rsync -av ./* root@xx.xx.xx.xx:/nasmnt/shared/
+
 # rsync 遠端備份
 # 用法就跟 scp 指令很像，不過 rsync 會更有效率
 rsync -av /mypath/myfile.gz pi@192.168.1.12:/mybackup/
