@@ -6,7 +6,7 @@ mkdir/data/blank
 
 # 2）用rsync刪除目標目錄
 
-rsync--delete-before -d /data/blank/ /var/spool/clientmqueue/
+rsync --delete-before -d /data/blank/ /var/spool/clientmqueue/
 
 # 這樣目標目錄很快就被清空了
 #
@@ -21,7 +21,7 @@ touch/data/blank.txt
 
 #2）用rsync清空文件
 
-rsync-a --delete-before --progress --stats /root/blank.txt /root/nohup.out
+rsync -a --delete-before --progress --stats /root/blank.txt /root/nohup.out
 
 # rsync所做的系統調用很少：沒有針對單個文件做lstat和unlink操作，但 rm -r 有，所以比較省時間
 
