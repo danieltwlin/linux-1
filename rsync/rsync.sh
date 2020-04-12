@@ -10,6 +10,10 @@ rsync -av /mypath/myfile.gz pi@192.168.1.12:/mybackup/
 rsync 從遠端抓資料
 rsync -av  pi@192.168.1.12:/mybackup/  /mypath/myfile.gz 
 
+# 複製 link 檔
+rsync --include '*.lnk' ./*  /src root@:/dest/
+
+
 # 顯示傳輸進度 ，會拖慢速度，慎用
 # 如果要讓 rsync 在傳輸檔案時可以即時顯示進度，可以加上 --progress 參數，或是大寫P：
 # -z 會先進行壓縮
