@@ -14,6 +14,11 @@ rsync -av  pi@192.168.1.12:/mybackup/  /mypath/myfile.gz
 rsync -av   --include '*.lnk'   /home/ftpmaster/ies  root@xx.xx.xx.xx:/nasmnt/cms/
 rsync -av   --include '*.lnk'   /home/ftpmaster/ies/4342  root@xx.xx.xx.xx:/nasmnt/cms/ies
 
+# rsync --include '*.lnk' ./srcdir/  /src root@:/dest/
+# 有加目錄符號 '/'，則只會拷貝目錄下的檔案，目錄本身不拷貝
+# rsync --include '*.lnk'  ./srcdir/*  /src root@:/dest/
+
+# 以下為 阿里雲 pod 掛 nas 時發生的情況，但後來試又正常
 # rsync --include '*.lnk' ./*  /src root@:/dest/
 # ==> ./* 的用法，好像沒有做遞迴，拷貝不到子目錄資料
 # ==> 最好使用絕對路徑，加上  /floder/ 的寫法
