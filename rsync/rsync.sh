@@ -11,8 +11,12 @@ rsync 從遠端抓資料
 rsync -av  pi@192.168.1.12:/mybackup/  /mypath/myfile.gz 
 
 # 複製 link 檔
-rsync --include '*.lnk' ./*  /src root@:/dest/
+rsync -av   --include '*.lnk'   /home/ftpmaster/ies  root@xx.xx.xx.xx:/nasmnt/cms/
+rsync -av   --include '*.lnk'   /home/ftpmaster/ies/4342  root@xx.xx.xx.xx:/nasmnt/cms/ies
 
+# rsync --include '*.lnk' ./*  /src root@:/dest/
+# ==> ./* 的用法，好像沒有做遞迴，拷貝不到子目錄資料
+# ==> 最好使用絕對路徑，加上  /floder/ 的寫法
 
 # 顯示傳輸進度 ，會拖慢速度，慎用
 # 如果要讓 rsync 在傳輸檔案時可以即時顯示進度，可以加上 --progress 參數，或是大寫P：
