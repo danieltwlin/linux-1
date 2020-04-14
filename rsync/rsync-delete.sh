@@ -2,7 +2,7 @@
 
 # 1）先建立一個空目錄
 
-mkdir/data/blank
+mkdir  /data/blank
 
 # 2）用rsync刪除目標目錄
 
