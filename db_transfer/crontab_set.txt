@@ -1,0 +1,4 @@
+
+# 必須用絕對路徑， 
+
+*/1 * * * * /bin/sh /web/mysql/master/docker-entrypoint-initdb.d/run_dump_dum.sh
