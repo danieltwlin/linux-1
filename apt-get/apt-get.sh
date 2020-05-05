@@ -3,6 +3,8 @@
 #apt-get 安裝指定版本
 #apt-get install <<package name>>=<<version>>
 
+apt-get install apache2=2.4\*
+
 #查询軟體有多少個版本
 #apt-cache madison <<package name>>
 apt-cache apache2
