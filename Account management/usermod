@@ -1,0 +1,24 @@
+
+變更使用者帳號名稱
+# usermod -l newname username
+
+變更使用者 UID
+# usermod -o -u 101 username
+
+變更使用者主要群組
+# usermod -g users username
+
+變更使用者次要群組
+# usermod -G mis,sales username
+
+修改使用者註解內容
+# usermod -c "manager" username
+
+變更使用者家目錄路徑
+# usermod -m -d /home/user username　
+
+變更使用者預設 Shell
+# usermod -s /usr/bin/ksh username
+
+變更使用者過期期限
+# usermod -e 1/1/2010 username
