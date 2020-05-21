@@ -8,3 +8,8 @@ done
 
 
 # 無窮迴圈
+
+
+
+# command: ["/bin/sh"]
+# args: ["-c", "while true; do echo hello; sleep 10;done"]
