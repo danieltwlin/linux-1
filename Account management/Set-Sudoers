@@ -1,0 +1,13 @@
+
+# 給予全部權限
+root    ALL=(ALL:ALL) ALL
+john  ALL = (ALL) ALL
+
+# 給予指定的 permission 
+john       ALL=(ALL) NOPASSWD:/usr/bin/thurderbird
+sg_kubectl ALL=(ALL:ALL) NOPASSWD:/usr/local/bin/kubectl,/bin/su
+
+# 簡單的環境變數設定
+nano /etc/environment
+# 加入執行檔路徑
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/lampp/bin,/usr/local/bin/kubectl"
