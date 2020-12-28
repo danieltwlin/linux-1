@@ -20,23 +20,23 @@ if(0):
 
 # Copy to container
 if(1):
-        container_id = 'f7313229ea07'
-        cmd = 'docker cp learncenter.sql ' + container_id + ':/opt'
+        container_id = 'xxxxxxxxxxxx'
+        cmd = 'docker cp db1.sql ' + container_id + ':/opt'
         print(cmd )
 
-        #os.system('docker cp learncenter.sql ' + container_id + ':/opt')
+        #os.system('docker cp db1.sql ' + container_id + ':/opt')
 
 
 
 # import cmd
 '''
-mysql -uroot -proot publicitem < publicitem.sql
-mysql -uroot -proot learncenter < learncenter.sql
-mysql -uroot -proot learncenter < answerinfo.sql
-mysql -uroot -proot learncenter < ies_middle.sql
-mysql -uroot -proot learncenter < xtrabackup_backupfiles.sql
-mysql -uroot -proot learncenter < api_a1_log.sql
-mysql -uroot -proot learncenter < api_log.sql
+mysql -uroot -proot db2 < db2.sql
+mysql -uroot -proot db1 < db1.sql
+mysql -uroot -proot db < tb1.sql
+mysql -uroot -proot db1 < tb2.sql
+mysql -uroot -proot db1 < tb3.sql
+mysql -uroot -proot db1 < tb4.sql
+mysql -uroot -proot db1 < tb5.sql
 
 '''
 # Total Time
