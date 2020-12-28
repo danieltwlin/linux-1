@@ -24,17 +24,17 @@ if(1):
                 os.system('sudo rm learncenter.sql')
 
         if(1):
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' publicitem > publicitem.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db1 > db1.sql')
 
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + '  learncenter answerinfo > answerinfo.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + '  db1 table1 > table1.sql')
 
-                os.system('/opt/lampp/bin/mysqldump learncenter --host=' + host + ' --ignore-table=learncenter.api_a1_log --ignore-table=learncenter.api_log --ignore-table=learncenter.answerinfo > learncenter$
+                os.system('/opt/lampp/bin/mysqldump learncenter --host=' + host + ' --ignore-table=db1.tb1_log --ignore-table=db1.tb2_log --ignore-table=db1.tb3 > db1$
 
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' ies_middle > ies_middle.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db2 > db2.sql')
 
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' xtrabackup_backupfiles > xtrabackup_backupfiles.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db3 > db3.sql')
 
         if(1):
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' learncenter api_a1_log  > api_a1_log.sql')
-                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' learncenter api_log  > api_log.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db1 api_log1  > api_log1.sql')
+                os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db1 api_log2  > api_log2.sql')
 
