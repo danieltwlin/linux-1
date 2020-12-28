@@ -19,9 +19,9 @@ if(1):
         # DB host
         host ='xx.xx.xx.xx'
         if(0):
-                os.system('sudo rm publicitem.sql')
-                os.system('sudo rm answerinfo.sql')
-                os.system('sudo rm learncenter.sql')
+                os.system('sudo rm db1.sql')
+                os.system('sudo rm table1.sql')
+                os.system('sudo rm db2.sql')
 
         if(1):
                 os.system('/opt/lampp/bin/mysqldump --host=' + host + ' db1 > db1.sql')
