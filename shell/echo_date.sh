@@ -8,3 +8,4 @@ echo "$now"
 
 # 寫入檔案
 echo $now >> now.txt
+
